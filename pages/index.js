@@ -1,21 +1,19 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Header from '../components/Header';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Facebook Clone</title>
+        <title>Facebook | NL</title>
       </Head>
-      <h1>Let's build a facebook clone</h1>
-      {/* Header */}
-      {/* Body */}
-      <div>
+        <Header />
+        {/* Body */}
+      <main>
         {/* Sidebar */}
         {/* Feed */}
         {/* Widgets */}
-      </div>
+      </main>
     </div>
   )
 }
