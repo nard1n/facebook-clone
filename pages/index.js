@@ -7,8 +7,9 @@ export default function Home() {
       <Head>
         <title>Facebook | NL</title>
       </Head>
+      
         <Header />
-        {/* Body */}
+
       <main>
         {/* Sidebar */}
         {/* Feed */}
