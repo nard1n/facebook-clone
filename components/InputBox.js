@@ -29,8 +29,7 @@ function InputBox() {
 
                 removeImage();
 
-                uploadTask.on("state_change", null, error => console.error(error), () => {
-                    //when upload completes
+                uploadTask.on("state_changed", null, (error) => {console.log(error)}, () => {
                     storage.ref("posts").child(doc.id).getDownloadURL().then((url) => {
                         db.collection("posts").doc(doc.id).set(
                         {
@@ -80,7 +79,7 @@ function InputBox() {
 
                 {imageToPost && (
                     <div onClick={removeImage} className="flex flex-col filter hover:brightness-110 transition duration-150 transform hover:scale-105 cursor:pointer">
-                        <img src={imageToPost} className="h-10 object-contain" alt="image to post" />
+                        <img src={imageToPost} className="h-10 object-contain" alt="" />
                         <p className="text-xs text-red-500 text-center">Remove</p>
                     </div>
                 )}
