@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Login from '../components/Login';
 import Sidebar from '../components/Sidebar';
 import Feed from '../components/Feed';
+import { useSession } from 'next-auth/client';
 
 
 export default function Home({ session }) {
@@ -12,7 +13,7 @@ export default function Home({ session }) {
   return (
     <div className="h-screen bg-gray-100 overflow-hidden">
       <Head>
-        <title>Facebook | NL</title>
+        <title>Facebook | {session.user.name}</title>
       </Head>
 
         <Header />
