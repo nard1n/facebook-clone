@@ -25,17 +25,24 @@ function InputBox() {
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         }).then((doc) => {
             if (imageToPost) {
-                const uploadTask = storage.ref(`posts/${doc.id}`).putString(imageToPost, "data_url");
+                const uploadTask = storage
+                .ref(`posts/${doc.id}`)
+                .putString(imageToPost, "data_url");
 
                 removeImage();
 
-                uploadTask.on("state_changed", null, (error) => {console.log(error)}, () => {
+                uploadTask.on(
+                    "state_changed",
+                    null, 
+                    (error) => {console.log(error)}, 
+                    () => {
                     storage.ref("posts").child(doc.id).getDownloadURL().then((url) => {
                         db.collection("posts").doc(doc.id).set(
                         {
-                            postImage: url,
+                            postImage: url
                         },
-                        {merge: true} );
+                        { merge: true } 
+                        );
                     });
                 });
             }
