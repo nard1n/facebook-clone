@@ -7,7 +7,7 @@ const firebaseConfig = {
     projectId: "facebookpoi",
     storageBucket: "facebookpoi.appspot.com",
     messagingSenderId: "163833942561",
-    appId: "1:163833942561:web:ca0d20ddff1d4b5ff34960"
+    appId: "1:163833942561:web:ca0d20ddff1d4b5ff34960",
   };
 
   const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
