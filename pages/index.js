@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Login from '../components/Login';
 import Sidebar from '../components/Sidebar';
 import Feed from '../components/Feed';
+import Widgets from '../components/Widgets';
 import { db } from "../firebase";
 
 
@@ -21,7 +22,7 @@ export default function Home({ session, posts }) {
       <main className="flex">
         <Sidebar />
         <Feed posts={posts} />
-        {/* Widgets */}
+        <Widgets />
       </main>
     </div>
   )
@@ -41,7 +42,8 @@ export async function getServerSideProps (context) {
 
   return{
     props: {
-      session, posts: docs
+      session, 
+      posts: docs,
     },
   };
 }
