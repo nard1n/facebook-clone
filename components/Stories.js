@@ -1,11 +1,6 @@
 import StoryCard from "./StoryCard";
 
 const stories =[
-    // {
-    //     name: "Nardin Lachowski",
-    //     src: "https://unsplash.com/photos/ute2XAFQU2I",
-    //     profile: "https://unsplash.com/photos/ap2SuhOb3K8",
-    // },
     {
         name: "Elon Musk",
         src: "https://links.papareact.com/4zn",
@@ -25,6 +20,11 @@ const stories =[
         name: "Bill Gates",
         src: "https://links.papareact.com/4u4",
         profile: "https://links.papareact.com/zvy",
+    },
+    {
+        name: "Elon Musk",
+        src: "https://links.papareact.com/4zn",
+        profile: "https://links.papareact.com/kxk",
     },
 ];
 
