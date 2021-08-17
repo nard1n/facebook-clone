@@ -6,7 +6,7 @@ Facebook clone built with Next.js, Next Auth, Tailwind CSS, Firebase Storage, an
 Screenshot of application:<br /><br />
 <img src="./facebook.png" alt="hulu clone screenshot" width="600" />
 
-Link to live application: 
+Link to live application: https://guarded-everglades-11427.herokuapp.com/
 
 ## Table of Contents
 
