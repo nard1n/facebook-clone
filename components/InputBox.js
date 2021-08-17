@@ -4,7 +4,8 @@ import Image from "next/image";
 import { EmojiHappyIcon } from"@heroicons/react/outline";
 import { CameraIcon, VideoCameraIcon } from"@heroicons/react/solid";
 import { db, storage } from "../firebase";
-import firebase from "firebase";
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 function InputBox() {
     const [session] = useSession();
